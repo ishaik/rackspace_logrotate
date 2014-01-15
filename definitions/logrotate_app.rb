@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: logrotate
+# Cookbook Name:: rackspace_logrotate
 # Definition:: logrotate_instance
 #
 # Copyright 2009, Scott M. Likens
@@ -21,7 +21,7 @@ log_rotate_params = {
   :enable         => true,
   :frequency      => 'weekly',
   :template       => 'logrotate.erb',
-  :cookbook       => 'logrotate',
+  :cookbook       => 'rackspace_logrotate',
   :template_mode  => '0440',
   :template_owner => 'root',
   :template_group => 'root',
@@ -33,7 +33,7 @@ log_rotate_params = {
 }
 
 define(:logrotate_app, log_rotate_params) do
-  include_recipe 'logrotate::default'
+  include_recipe 'rackspace_logrotate::default'
 
   acceptable_options = %w(missingok compress delaycompress dateext dateyesterday copytruncate notifempty delaycompress ifempty mailfirst nocompress nocopy nocopytruncate nocreate nodelaycompress nomail nomissingok noolddir nosharedscripts notifempty sharedscripts)
   options_tmp = params[:options] ||= %w(missingok compress delaycompress copytruncate notifempty)

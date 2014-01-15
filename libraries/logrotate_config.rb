@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: logrotate
+# Cookbook Name:: rackspace_logrotate
 # Library:: CookbookLogrotate
 #
 # Copyright 2013, Opscode

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'logrotate::default' do
+describe 'rackspace_logrotate::default' do
   let(:chef_run) { ChefSpec::ChefRunner.new.converge(described_recipe) }
 
   it 'installs the logrotate package' do
