@@ -39,9 +39,9 @@ The same is true of frequency directives; to be certain the frequency directive 
 
 ```ruby
 %w[ daily, weekly, yearly ].do |freq|
-  node.override['logrotate']['global'][freq] = false
+  node.override[:rackspace_logrotate][:config][:global][freq] = false
 end
-node.override['logrotate']['global']['monthly'] = true
+node.override[:rackspace_logrotate][:config][:global][:monthly] = true
 ```
 
 To define a parameter with a value (e.g. `create`, `mail`) add an attribute with the desired value:
