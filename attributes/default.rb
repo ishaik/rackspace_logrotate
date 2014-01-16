@@ -18,7 +18,8 @@
 # limitations under the License.
 #
 
-default[:rackspace_logrotate][:templates_cookbook] = 'rackspace-logrotate'
+default[:rackspace_logrotate][:templates_cookbook][:logrotate] = 'rackspace_logrotate'
+default[:rackspace_logrotate][:templates_cookbook][:logrotate_global] = 'rackspace_logrotate'
 
 default[:rackspace_logrotate][:config][:global][:create] = ''
 default[:rackspace_logrotate][:config][:global][:weekly] = true
