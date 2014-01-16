@@ -30,11 +30,3 @@ template '/etc/logrotate.conf' do
     :rackspace_logrotate => parsed_configuration
   })
 end
-
-logrotate_app 'lsync-test' do
-  cookbook  'rackspace_logrotate'
-  path      '/var/log/lsyncd.log'
-  frequency 'daily'
-  rotate    30
-  create    '644 root adm'
-end
