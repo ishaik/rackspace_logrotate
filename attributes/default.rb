@@ -3,7 +3,7 @@
 # Attribute:: default
 #
 # Copyright 2013, Opscode
-# Copyright 2013, Rackspace, US Inc.
+# Copyright 2014, Rackspace, US Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+default[:rackspace_logrotate][:templates_cookbook] = 'rackspace-logrotate'
 
 default[:rackspace_logrotate][:config][:global][:create] = ''
 default[:rackspace_logrotate][:config][:global][:weekly] = true

@@ -11,6 +11,5 @@ provides 'logrotate_app'
 
 supports 'centos'
 supports 'debian'
-supports 'fedora'
 supports 'redhat'
 supports 'ubuntu'
