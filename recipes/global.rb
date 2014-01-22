@@ -20,10 +20,10 @@
 
 include_recipe 'rackspace_logrotate::default'
 
-parsed_configuration = CookbookLogrotate::LogrotateConfiguration.from_hash(node[:rackspace_logrotate][:config][:global].to_hash)
+parsed_configuration = CookbookLogrotate::LogrotateConfiguration.from_hash(node['rackspace_logrotate']['config']['global'].to_hash)
 
 template '/etc/logrotate.conf' do
-  cookbook node[:rackspace_logrotate][:templates_cookbook][:logrotate]
+  cookbook node['rackspace_logrotate']['templates_cookbook']['logrotate']
   source 'logrotate-global.erb'
   mode   '0644'
   variables ({

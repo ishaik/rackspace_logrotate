@@ -18,19 +18,19 @@
 # limitations under the License.
 #
 
-default[:rackspace_logrotate][:templates_cookbook][:logrotate] = 'rackspace_logrotate'
-default[:rackspace_logrotate][:templates_cookbook][:logrotate_global] = 'rackspace_logrotate'
+default['rackspace_logrotate']['templates_cookbook']['logrotate'] = 'rackspace_logrotate'
+default['rackspace_logrotate']['templates_cookbook']['logrotate_global'] = 'rackspace_logrotate'
 
-default[:rackspace_logrotate][:config][:global][:create] = ''
-default[:rackspace_logrotate][:config][:global][:weekly] = true
-default[:rackspace_logrotate][:config][:global][:rotate] = 4
+default['rackspace_logrotate']['config']['global']['create'] = ''
+default['rackspace_logrotate']['config']['global']['weekly'] = true
+default['rackspace_logrotate']['config']['global']['rotate'] = 4
 
-default[:rackspace_logrotate][:config][:global]['/var/log/wtmp'][:missingok] = true
-default[:rackspace_logrotate][:config][:global]['/var/log/wtmp'][:monthly] = true
-default[:rackspace_logrotate][:config][:global]['/var/log/wtmp'][:create] = '0664 root utmp'
-default[:rackspace_logrotate][:config][:global]['/var/log/wtmp'][:rotate] = 1
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['missingok'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['monthly'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['create'] = '0664 root utmp'
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['rotate'] = 1
 
-default[:rackspace_logrotate][:config][:global]['/var/log/btmp'][:missingok] = true
-default[:rackspace_logrotate][:config][:global]['/var/log/btmp'][:monthly] = true
-default[:rackspace_logrotate][:config][:global]['/var/log/btmp'][:create] = '0660 root utmp'
-default[:rackspace_logrotate][:config][:global]['/var/log/btmp'][:rotate] = 1
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['missingok'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['monthly'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['create'] = '0660 root utmp'
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['rotate'] = 1
