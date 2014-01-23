@@ -26,7 +26,5 @@ template '/etc/logrotate.conf' do
   cookbook node['rackspace_logrotate']['templates_cookbook']['logrotate']
   source 'logrotate-global.erb'
   mode   '0644'
-  variables ({
-    :rackspace_logrotate => parsed_configuration
-  })
+  variables rackspace_logrotate: parsed_configuration
 end

@@ -27,9 +27,9 @@ suites:
   - name: default
     run_list:
       - recipe[rackspace_logrotate::default]
-  - name: definition
-    run_list:
-      - recipe[fake::definition]
+#  - name: definition
+#    run_list:
+#      - recipe[fake::definition]
   - name: global
     run_list:
       - recipe[rackspace_logrotate::global]
