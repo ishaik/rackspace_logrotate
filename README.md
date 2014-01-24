@@ -1,9 +1,6 @@
-logrotate Cookbook
+rackspace_logrotate Cookbook
 ==================
-[![Build Status'](https://secure.travis-ci.org/stevendanna/logrotate.png?branch=master)'](http://travis-ci.org/stevendanna/logrotate)
-
-Manages the logrotate package and provides a definition to manage application specific logrotate configuration.
-
+Manages the logrotate package and provides a definition to manage application specific logrotate configuration. Based on the Steven Danna's [cookbook](https://github.com/stevendanna/logrotate)
 
 Requirements
 ------------
@@ -142,7 +139,13 @@ logrotate_app 'tomcat-myapp' do
   create    '644 root adm'
 end
 ```
+Testing
+-------
+Please see testing section of the [contributing](https://github.com/rackspace-cookbooks/contributing/blob/master/CONTRIBUTING.md) guide.
 
+Contributing
+------------
+Please see testing section of the [contributing](https://github.com/rackspace-cookbooks/contributing/blob/master/CONTRIBUTING.md) guide.
 
 License & Authors
 -----------------

@@ -1,4 +1,4 @@
 require 'chefspec'
-require 'berkshelf'
+require 'chefspec/berkshelf'
 
 at_exit { ChefSpec::Coverage.report! }
