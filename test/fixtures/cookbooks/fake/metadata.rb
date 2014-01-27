@@ -1,4 +1,4 @@
 name 'fake'
 version '1.0.0'
 
-depends 'logrotate'
+depends 'rackspace_logrotate'

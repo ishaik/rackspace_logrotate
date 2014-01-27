@@ -1,8 +1,9 @@
 #
-# Cookbook Name:: logrotate
+# Cookbook Name:: rackspace_logrotate
 # Attribute:: default
 #
 # Copyright 2013, Opscode
+# Copyright 2014, Rackspace, US Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,22 +18,19 @@
 # limitations under the License.
 #
 
-default['logrotate']['global'] = {
-  'weekly' => true,
-  'rotate' => 4,
-  'create' => '',
+default['rackspace_logrotate']['templates_cookbook']['logrotate'] = 'rackspace_logrotate'
+default['rackspace_logrotate']['templates_cookbook']['logrotate_global'] = 'rackspace_logrotate'
 
-  '/var/log/wtmp' => {
-    'missingok' => true,
-    'monthly' => true,
-    'create' => '0664 root utmp',
-    'rotate' => 1
-  },
+default['rackspace_logrotate']['config']['global']['create'] = ''
+default['rackspace_logrotate']['config']['global']['weekly'] = true
+default['rackspace_logrotate']['config']['global']['rotate'] = 4
 
-  '/var/log/btmp' => {
-    'missingok' => true,
-    'monthly' => true,
-    'create' => '0660 root utmp',
-    'rotate' => 1
-  }
-}
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['missingok'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['monthly'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['create'] = '0664 root utmp'
+default['rackspace_logrotate']['config']['global']['/var/log/wtmp']['rotate'] = 1
+
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['missingok'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['monthly'] = true
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['create'] = '0660 root utmp'
+default['rackspace_logrotate']['config']['global']['/var/log/btmp']['rotate'] = 1

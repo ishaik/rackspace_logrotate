@@ -1,8 +1,9 @@
 #
-# Cookbook Name:: logrotate
+# Cookbook Name:: rackspace_logrotate
 # Recipe:: default
 #
 # Copyright 2009-2013, Opscode, Inc.
+# Copyright 2014, Rackspace, US Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,14 +18,13 @@
 # limitations under the License.
 #
 
-include_recipe 'logrotate::default'
+include_recipe 'rackspace_logrotate::default'
 
-parsed_configuration = CookbookLogrotate::LogrotateConfiguration.from_hash(node['logrotate']['global'].to_hash)
+parsed_configuration = CookbookLogrotate::LogrotateConfiguration.from_hash(node['rackspace_logrotate']['config']['global'].to_hash)
 
 template '/etc/logrotate.conf' do
+  cookbook node['rackspace_logrotate']['templates_cookbook']['logrotate']
   source 'logrotate-global.erb'
   mode   '0644'
-  variables(
-    :configuration => parsed_configuration
-  )
+  variables rackspace_logrotate: parsed_configuration
 end

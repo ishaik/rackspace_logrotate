@@ -2,6 +2,10 @@ logrotate Cookbook CHANGELOG
 ============================
 This file is used to list changes made in each version of the logrotate cookbook.
 
+v2.0.0
+------
+### Improvement
+Rewrite for Rackspace environment
 
 v1.4.0
 ------

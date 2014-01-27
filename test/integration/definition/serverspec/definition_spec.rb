@@ -2,7 +2,7 @@ require 'serverspec'
 include Serverspec::Helper::Exec
 include Serverspec::Helper::DetectOS
 
-describe 'logrotate::default' do
+describe 'rackspace_logrotate::default' do
   describe file('/etc/logrotate.d/tomcat-myapp') do
     it { should be_a_file }
     it { should be_mode(440) }
